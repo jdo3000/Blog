@@ -5,7 +5,7 @@ mongoose       = require("mongoose"),
 express        = require("express"),
 app            = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 6401;
 app.listen(port, function() {
     console.log("App is running on port " + port);
 });

@@ -7,7 +7,17 @@ app            = express();
 
 
 //APP CONFIG
-mongoose.connect("mongodb://localhost:27017/restful_blog_app", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://jeff:blogapppass@blog-fwl4z.mongodb.net/test?retryWrites=true&w=majority', {
+	useNewUrlParser: true,
+	useCreateIndex: true,
+	useUnifiedTopology: true
+}).then(() => {
+	console.log ("connected to DB");
+}).catch(err => {
+	console.log("ERROR:", err.message);
+});
+	
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -102,6 +112,6 @@ app.delete("/blogs/:id", function(req, res){
 
 //restful routes
 app.listen(3000, function(){
-	console.log("connected")
+	console.log("listening on port 3000")
 })
 

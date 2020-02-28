@@ -5,17 +5,12 @@ mongoose       = require("mongoose"),
 express        = require("express"),
 app            = express();
 
-
+//https://secure-woodland-34728.herokuapp.com/
 //APP CONFIG
-mongoose.connect('mongodb+srv://jeff:blogapppass@blog-fwl4z.mongodb.net/test?retryWrites=true&w=majority', {
-	useNewUrlParser: true,
+mongoose.connect('mongodb+srv://jeff:blogapppass@blog-fwl4z.mongodb.net/test?retryWrites=true&w=majority', 
+	{useNewUrlParser: true,
 	useCreateIndex: true,
-	useUnifiedTopology: true
-}).then(() => {
-	console.log ("connected to DB");
-}).catch(err => {
-	console.log("ERROR:", err.message);
-});
+	useUnifiedTopology: true});
 	
 
 app.set("view engine", "ejs");

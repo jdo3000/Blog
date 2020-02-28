@@ -1,0 +1,44 @@
+i.icon {
+	font-size: 2em;
+}
+
+.zoom {
+	transition: transform .15s;
+}
+
+.showbutton {
+	width:100%;
+    display:block;
+}
+
+.main.container {
+	margin-top: 7.0em;
+	margin-bottom: 4.0em;
+}
+
+.center {
+	text-align: center;
+}
+
+.thumbnail {
+	padding: 0.1em;
+}
+
+.zoom:hover {
+  transform: scale(1.03); 
+}
+
+#homepage {
+	margin-top: 7.0em;
+	margin-bottom: 4.0em;
+}
+
+#delete {
+	display: inline;
+	float: right;
+}
+
+body {
+	background: #d9d9d9;
+
+}
